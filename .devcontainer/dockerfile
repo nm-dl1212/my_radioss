@@ -5,7 +5,7 @@ RUN apt-get update && \
     sudo \
     unzip \
     wget \
-    build-essential 
+    build-essential \
     gfortran \
     cmake \
     perl \
