@@ -1,21 +1,21 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
-RUN apt-get update && \
-    apt-get install -y \
-    sudo \
-    unzip \
-    wget \
-    build-essential \
-    gfortran \
-    cmake \
-    perl \
-    python3 \
-    python-is-python3 \
-    git-lfs
+#RUN apt-get update && \
+#    apt-get install -y \
+#    sudo \
+#    unzip \
+#    wget \
+#    build-essential \
+#    gfortran \
+#    cmake \
+#    perl \
+#    python3 \
+#    python-is-python3 \
+#    git-lfs
 
 # openradiossのbinaryを解凍する
-wget https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20230624/OpenRadioss_linux64.zip /opt/
+#wget https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20230624/OpenRadioss_linux64.zip /opt/
 #COPY ./app/OpenRadioss_linux64.zip /opt/OpenRadioss_linux64.zip
-RUN sudo unzip /opt/OpenRadioss_linux64.zip -d /opt/
+#RUN sudo unzip /opt/OpenRadioss_linux64.zip -d /opt/
 
 WORKDIR /home/work
