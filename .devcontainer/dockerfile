@@ -18,7 +18,6 @@ RUN apt-get update && \
 # openradiossのbinaryを解凍する
 #COPY ./app/OpenRadioss_linux64.zip /opt/OpenRadioss_linux64.zip
 RUN wget -P /opt/ https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20230624/OpenRadioss_linux64.zip && \
-    unzip /opt/OpenRadioss_linux64.zip -d /opt/ \
-    rm /opt/OpenRadioss_linux64.zip 
+    unzip /opt/OpenRadioss_linux64.zip -d /opt/ 
 
 WORKDIR /home/work
