@@ -1,6 +1,7 @@
 
 /work/*/*
 !/work/*/*.rad
+!/work/*/*.sh
 
 lspost.msg
 lspost.cfile
