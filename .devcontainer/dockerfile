@@ -11,13 +11,26 @@ RUN apt-get update && \
     perl \
     python3 \
     python-is-python3 \
-    git-lfs \
+
+    # lspp
+    libgtk2.0-dev \
+    libopencv-dev \
+    libglu1 \
+    libxmu-dev \
+    
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# openradiossのbinaryを解凍する
-#COPY ./app/OpenRadioss_linux64.zip /opt/OpenRadioss_linux64.zip
-RUN wget -P /opt/ https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20230624/OpenRadioss_linux64.zip && \
-    unzip /opt/OpenRadioss_linux64.zip -d /opt/ 
+# openradioss
+RUN wget -P /opt/ https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20240112/OpenRadioss_linux64.zip && \
+    unzip /opt/OpenRadioss_linux64.zip -d /opt/ && \
+    rm /opt/OpenRadioss_linux64.zip
 
-WORKDIR /home/work
+# ls-prepost
+RUN wget -P /opt/ https://ftp.lstc.com/anonymous/outgoing/lsprepost/4.8/linux64/lsprepost-4.8.30-common-20Apr2022.tgz && \
+    tar -xzvf /opt/lsprepost-4.8.30-common-20Apr2022.tgz -C /opt/ && \
+    chmod -R 755 /opt/lsprepost4.8_common && \
+    rm /opt/lsprepost-4.8.30-common-20Apr2022.tgz
+
+COPY assets/lspp48 /opt/lsprepost4.8_common/lspp48
+ENV PATH=$PATH:/opt/lsprepost4.8_common/

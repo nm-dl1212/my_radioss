@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# modify the following line for your directory name
+DN="/opt/lsprepost4.8_common"
+export LSPP_HELPDIR=$DN/resource/HelpDocument
+export LD_LIBRARY_PATH=$DN/lib:$LD_LIBRARY_PATH
+
+$DN/lsprepost $*
