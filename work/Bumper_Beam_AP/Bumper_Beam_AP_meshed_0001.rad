@@ -12,6 +12,8 @@
 /RUN/Bumper_Beam_AP_meshed/0/
                  100
 /STOP
+# Emax Mmax Nmax NTH NANIM NERR_POSIT
+0.99 0.05 0 1 1 1
 /TFILE/4
 #            dT_HIS
 0.100000
