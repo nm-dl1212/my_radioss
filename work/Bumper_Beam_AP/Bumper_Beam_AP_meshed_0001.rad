@@ -1,0 +1,26 @@
+#
+# Copyright (C) 2022 Altair Engineering Inc. ("Holder")
+# Model is licensed by Holder under CC BY-NC 4.0
+# (https://creativecommons.org/licenses/by-nc/4.0/legalcode).
+/ANIM/DT
+#   TSTART     TFREQ
+0.000000 1.000000
+/ANIM/GPS/TENS
+/DT1TET10
+/NEGVOL/STOP
+/PARITH/OFF
+/RUN/Bumper_Beam_AP_meshed/0/
+                 100
+/STOP
+/TFILE/4
+#            dT_HIS
+0.100000
+/VERS/2022
+/ANIM/VECT/DISP
+/ANIM/VECT/VEL
+/ANIM/VECT/ACC
+/ANIM/ELEM/ENER
+/DT/NODA/CST/0
+0.9 0 1e-2
+/ANIM/BRICK/TENS/STRESS/000
+/PRINT/-100

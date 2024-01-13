@@ -1,5 +1,8 @@
-.env
-/work
+
+/work/*/*
+!/work/*/*.rad
 
 lspost.msg
 lspost.cfile
+
+.env
