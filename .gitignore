@@ -1,5 +1,7 @@
 
 /work/*/*
+!/work/*/*.k
+!/work/*/*.key
 !/work/*/*.rad
 !/work/*/*.sh
 

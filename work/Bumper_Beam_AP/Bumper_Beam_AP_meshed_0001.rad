@@ -5,12 +5,16 @@
 /ANIM/DT
 #   TSTART     TFREQ
 0.000000 1.000000
+
 /ANIM/GPS/TENS
 /DT1TET10
 /NEGVOL/STOP
 /PARITH/OFF
+
 /RUN/Bumper_Beam_AP_meshed/0/
-                 100
+# Tstop
+100
+
 /STOP
 # Emax Mmax Nmax NTH NANIM NERR_POSIT
 0.99 0.05 0 1 1 1
