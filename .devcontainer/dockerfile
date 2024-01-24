@@ -8,21 +8,16 @@ RUN apt-get update && \
     build-essential \
     gfortran \
     cmake \
-    perl \
-    python3 \
-    python-is-python3 \
-
     # lspp
     libgtk2.0-dev \
     libopencv-dev \
     libglu1 \
     libxmu-dev \
-    
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # openradioss
-RUN wget -P /opt/ https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20240112/OpenRadioss_linux64.zip && \
+RUN wget -P /opt/ https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20240124/OpenRadioss_linux64.zip&& \
     unzip /opt/OpenRadioss_linux64.zip -d /opt/ && \
     rm /opt/OpenRadioss_linux64.zip
 
