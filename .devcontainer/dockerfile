@@ -27,5 +27,8 @@ RUN wget -P /opt/ https://ftp.lstc.com/anonymous/outgoing/lsprepost/4.8/linux64/
     chmod -R 755 /opt/lsprepost4.8_common && \
     rm /opt/lsprepost-4.8.30-common-20Apr2022.tgz
 
-COPY assets/lspp48 /opt/lsprepost4.8_common/lspp48
-ENV PATH=$PATH:/opt/lsprepost4.8_common/
+# environment
+ENV DN="/opt/lsprepost4.8_common"
+ENV PATH=$DN:$PATH
+ENV LSPP_HELPDIR=$DN/resource/HelpDocument
+ENV LD_LIBRARY_PATH=$DN/lib:$LD_LIBRARY_PATH
