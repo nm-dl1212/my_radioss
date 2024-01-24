@@ -17,15 +17,15 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # openradioss
-RUN wget -P /opt/ https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20240124/OpenRadioss_linux64.zip&& \
-    unzip /opt/OpenRadioss_linux64.zip -d /opt/ && \
-    rm /opt/OpenRadioss_linux64.zip
+RUN wget -P . https://github.com/OpenRadioss/OpenRadioss/releases/download/latest-20240124/OpenRadioss_linux64.zip&& \
+    unzip OpenRadioss_linux64.zip -d /opt/ && \
+    rm OpenRadioss_linux64.zip
 
 # ls-prepost
-RUN wget -P /opt/ https://ftp.lstc.com/anonymous/outgoing/lsprepost/4.8/linux64/lsprepost-4.8.30-common-20Apr2022.tgz && \
-    tar -xzvf /opt/lsprepost-4.8.30-common-20Apr2022.tgz -C /opt/ && \
+RUN wget -P . https://ftp.lstc.com/anonymous/outgoing/lsprepost/4.8/linux64/lsprepost-4.8.30-common-20Apr2022.tgz && \
+    tar -xzvf lsprepost-4.8.30-common-20Apr2022.tgz -C /opt/ && \
     chmod -R 755 /opt/lsprepost4.8_common && \
-    rm /opt/lsprepost-4.8.30-common-20Apr2022.tgz
+    rm lsprepost-4.8.30-common-20Apr2022.tgz
 
 # environment
 ENV DN="/opt/lsprepost4.8_common"
